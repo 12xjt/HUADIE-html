@@ -1,0 +1,257 @@
+
+* {
+    padding: 0;
+    margin: 0;
+ }
+
+body{
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.container{
+    max-width: 70rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+header:after{
+    content:'';
+    position: absolute;
+    width:100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    background-color: rgba(0,0,0,0.05);
+    z-index: 25;
+}
+
+.paper{
+    position: absolute;
+    bottom: -10x;
+    width: 1500px;
+    right: 0;
+    z-index: 19;
+}
+
+.fire{
+    position: absolute;
+    bottom: -10px;
+    width: 1500px;
+    right: 0;
+    z-index: 18;
+}
+
+nav{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 1rem 0; 
+    z-index: 30;
+    background-color: linear-gradient(to bottom, rgb(255, 255, 255), transparent)
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color:rgb(0, 0, 0);
+    font-size: 1,1rem;
+    text-transform:uppercase; 
+    font-weight: 600;
+    letter-spacing:2px ;
+} 
+
+.logo span{
+    font-weight: 300;
+}
+
+.navbar,
+.navbar ul{
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.navbar{
+    position: relative;
+    padding:10px;
+
+}
+.navbar input{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+
+}
+.navbar span{
+    position: absolute;
+    left: 40px;
+    top:calc(50% - 5px);
+    width:20px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out,top 0.3s ease-in-out 0.3s;
+}
+.navbar span:nth-child(3){
+    top:calc(50% + 3px);
+}
+
+.navbar ul{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.5s;
+}
+
+.navbar ul li{
+    list-style: none;
+    padding-right: 80px;
+ 
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.navbar ul li a:hover{
+    color: #585858;
+}
+
+.navbar input:checked ~ ul{
+    width: 200px;
+}
+.navbar input:checked ~ span:nth-child(2){
+    top:calc(50% - 2px);
+    transform: rotate(-45deg);
+    background-color:#000000;
+    transition: top 0.3s ease-in-out,transform 0.3s
+    ease-in-out 0.3s;
+}
+
+.navbar input:checked ~ span:nth-child(3){
+    top:calc(50% - 2px);
+    transform: rotate(45deg);
+    background-color:#000000;
+    transition: top 0.3s ease-in-out,transform 0.3s
+    ease-in-out 0.3s;
+}
+.big-title{
+    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 30;
+    line-height: 4rem;
+    top: calc(35% - 2rem);
+    width: 100%;
+    text-align:center;
+    font-size: 10rem;
+ }
+
+ section{
+        width: 100%;
+        background-color: #000000;
+        position: relative;
+ }
+
+
+ section .container{
+     padding: 3rem;
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+ }
+
+ section img{
+     width: 100%;
+ }
+
+ section.container >*{
+     margin: 2rem;
+ }
+
+ .content{
+     color: rgb(255, 255, 255);
+     transform:translate(-50px);
+     padding-top:3.5rem;;
+     font-weight: 300;
+    
+ }
+
+ .imgContainer{
+     transform: translateY(50px);
+ }
+ 
+ .other{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem ;
+    padding-bottom: .5rem;
+    position: relative;
+
+ }
+ 
+ .title{
+     font-weight: 600;
+     font-size: 1.5rem;
+     margin-bottom: 1.5rem ;
+     padding-bottom: .5rem;
+     position: relative;
+    
+ }
+
+ section.container>*{
+     margin:2rem;
+ }
+
+ .shadow {
+     position: absolute;
+     bottom:100%;
+     height: 250px;
+     width: 100%;
+     left:0;
+     z-index: 20;
+     background: linear-gradient(to top,rgb(0, 0, 0),transparent);
+}
+
+
+
+
+@media(max-width:850px){
+    section .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:600px){
+    .big-title{
+        font-size: 3rem;
+    }
+
+    .text{
+        font-size: 8rem;
+    }
+
+    .title{
+        font-size: 1.2rem;
+    }
+}

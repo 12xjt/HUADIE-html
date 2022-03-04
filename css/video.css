@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #585858;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+.name{
+   padding: 30px 1220px;
+}
+  .logo{
+    color:rgb(0, 0, 0);
+    font-size: 1,1rem;
+    text-transform:uppercase; 
+    font-weight: 500;
+    letter-spacing:1px ;
+} 
+
+.logo span{
+    font-weight: 300;
+}
+  .container{
+    margin:0rem 3rem  ;
+  }
+
+
+  @media(max-width: 991px)
+  {
+      .container{
+          top:70%;
+          left: 50%;
+          height: 600px;
+      }
+  }
+  @media( max-width:420px)
+  {
+   .container{
+       padding: 20px;
+   }
+}

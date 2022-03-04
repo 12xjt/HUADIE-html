@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Burn it!</title>
+        <link rel="stylesheet" href="BI.css">
+        <meta http-equiv=refresh content="10;url=end.html">
+</head>
+<body background="imag/12.png">
+
+    <img id="cd"src="imag/14.png"> 
+    
+ </body>
+ <script>
+var cd=document.getElementById("cd");
+        cd.onmousedown=function(event){
+        var event=event;
+        var pageX=event.pageX;
+        var pageY=event.pageY;
+        var cdX=pageX-cd.offsetLeft;
+        var cdY=pageY-cd.offsetTop;
+
+        document.onmousemove=function(event){
+        var event= event;
+        var pageX=event.pageX;
+        var pageY=event.pageY;
+        cd.style.left=pageX-cdX+"px";
+        cd.style.top=pageY-cdY+"px";
+
+    } 
+        }
+        document.onmouseup=function(){
+        document.onmousemove=null;
+    }
+
+  var i=14;
+  setInterval(function(){
+          i++;       
+  document.getElementById('cd').src="imag/"+i+".png";},1500);
+  
+ function aa(){
+ document.getElementById("cd").style.display="none";
+    }
+        setTimeout("aa()",6000); 
+//-->
+
+
+ </script> 
+ 
+</html>

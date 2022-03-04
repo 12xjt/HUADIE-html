@@ -1,0 +1,66 @@
+echo "# HUADIE-html" >> README.md
+git init
+git add README.md
+git commit -m“first commit”
+git branch -M main
+git remote add origin https://github.com/12xjt/HUADIE-html.git
+git push -u origin main
+<!DOCTYPE html>
+<html>
+<head>
+        <title>a web for hospic</title>
+        <link rel="stylesheet" href="./css/huadie.css">
+
+</head>
+<body>
+     <header>
+         <nav>
+            <div class="container">
+                <h3 class="logo">Hua<span>Die</span></h3>
+                <div class="navbar">
+                    <input type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                           <ul>
+                               <li><a href="IC.html">Invitation Code.</a></li>   
+                           </ul>
+                </div>
+            </div>
+
+        </nav>
+        
+        <h1 class="big-title translate" data-speed="0.1">HALLO.</h1>
+
+        
+
+        <img src="imag/01.png" class="paper translate" data-speed="-0.25" alt="" >
+        <img src="imag/02.png" class="fire translate" data-speed="1" alt="" >
+    </header>
+
+    <section>
+        <div class="shadow"></div>
+        <div class="container">
+            <div class="content opacity">
+                <h3 class="other">
+                    What is HuaDie?
+                </h3>
+                <p>A project to help people face death and recall the past.</p>
+                <h3 class="title">
+                    Why is it called HuaDie?
+                    <div class="border"></div>
+                </h3>
+                <p class="text">HuaDie means turning into a butterfly.
+                    Liang Shanbo and Zhu Yingtai are beautiful folk love stories 
+                    in China. They can't be together for various reasons. But when 
+                    they died, they became butterflies together. So I want to use
+                     butterfly to refer to these beautiful things or memories.</p>
+            </div>
+            <div class="imgContainer opacity">
+                <img src="imag/03.png" class="paper+fire" alt="">
+             </div>
+        </div>
+    </section>
+    
+    <script src="huadie.js"></script>
+ </body>
+</html>
